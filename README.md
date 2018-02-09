@@ -21,17 +21,26 @@ default theme: `chrome`
 
 # Install
 
-`npm i ng-ace`
+`npm i ng-ace-tern`
 
-# Sample Usage
+
+
+## Sample Usage
+
+add scripts `ace-builds` in your `index.html` or `angular-cli.json`
+
+eg: 
+
+```html
+    <script src="./assets/ace-builds/src-noconflict/ace.js"></script>
+```
+
+
 
 ```ts
 import { Component } from '@angular/core';
 
 import { AceEditorDirective } from 'ng-ace-tern';
-
-import 'brace/theme/clouds';
-import 'brace/mode/sql';
 
 @Component({
   directives: [AceEditorDirective],
@@ -62,6 +71,7 @@ Important pieces to note in the HTML template: `[ace-editor]` attribute, `[text]
 ## Related
 
 [ng-ace](https://github.com/giscafer/ng-ace)
+[Ace.Tern](https://github.com/sevin7676/Ace.Tern)
 
 # License 
 
