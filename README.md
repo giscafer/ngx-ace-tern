@@ -70,9 +70,16 @@ Important pieces to note in the HTML template: `[ace-editor]` attribute, `[text]
 
 ## Related
 
-[ng-ace](https://github.com/giscafer/ng-ace)
-[Ace.Tern](https://github.com/sevin7676/Ace.Tern)
+- [ng-ace](https://github.com/giscafer/ng-ace)
+- [Ace.Tern](https://github.com/sevin7676/Ace.Tern)
 
 # License 
 
 MIT
+
+---
+
+> [giscafer.com](http://giscafer.com) &nbsp;&middot;&nbsp;
+> GitHub [@giscafer](https://github.com/giscafer) &nbsp;&middot;&nbsp;
+> Twitter [@nickbinglao](https://twitter.com/nickbinglao) &nbsp;&middot;&nbsp;
+> Weibo [@Nickbing_Lao](https://weibo.com/laohoubin)
