@@ -4,7 +4,7 @@
 
 Tern plugin for Ace Editor, suport angular2\angular4\agnular5. 
 
-[Online Demo](http://giscafer.github.io/ng-ace-tern)
+[Online Demo](http://giscafer.github.io/ng-ace-tern/)
 
 
 default options
