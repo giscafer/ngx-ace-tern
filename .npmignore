@@ -2,7 +2,7 @@
 logs
 *.log
 npm-debug.log*
-
+.ng_pkg_build
 # Runtime data
 pids
 *.pid

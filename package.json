@@ -5,7 +5,7 @@
   "main": "./bundles/ng-ace-tern.umd.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && ngc && ng-packagr -p ng-package.json",
+    "build": "npm run clean && ngc lib && ng-packagr -p ng-package.json",
     "build2": "ngc && ng-packagr -p ng-package.json",
     "compile": "babel src/index.js -o index.js --plugins transform-decorators-legacy,transform-class-properties --presets es2015"
   },
