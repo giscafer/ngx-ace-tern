@@ -1,6 +1,6 @@
 {
   "name": "ngace-tern",
-  "version": "0.0.0",
+  "version": "1.2.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -23,6 +23,7 @@
     "@angular/router": "^6.0.6",
     "core-js": "^2.4.1",
     "ng-ace-tern": "^1.1.0",
+    "ngx-ace-tern": "^1.2.2",
     "rxjs": "^6.2.1",
     "rxjs-compat": "^6.0.0-rc.0",
     "zone.js": "^0.8.26"

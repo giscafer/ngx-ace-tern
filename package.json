@@ -1,48 +1,54 @@
 {
-    "name": "ng-ace-tern",
-    "version": "1.1.0",
-    "description": "An ace editor directive for angular.",
-    "main": "./bundles/ng-ace-tern.umd.js",
-    "scripts": {
-        "clean": "rimraf dist",
-        "build": "npm run clean && ngc lib && ng-packagr -p ng-package.json",
-        "build2": "ngc && ng-packagr -p ng-package.json",
-        "compile": "babel src/index.js -o index.js --plugins transform-decorators-legacy,transform-class-properties --presets es2015"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/giscafer/ng-ace-tern.git"
-    },
-    "keywords": [
-        "ng2",
-        "angular2",
-        "angular5",
-        "tern",
-        "ace",
-        "editor",
-        "ng2-ace",
-        "angular-ace"
-    ],
-    "author": "giscafer <giscafer@outlook.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/giscafer/ng-ace-tern/issues"
-    },
-    "homepage": "https://github.com/giscafer/ng-ace-tern#readme",
-    "dependencies": {
-        "@angular/core": "^6.0.0"
-    },
-    "peerDependencies": {
-        "@angular/core": "^6.0.0"
-    },
-    "devDependencies": {
-        "@angular/cli": "^6.0.8",
-        "@angular/compiler": "^6.0.0",
-        "@angular/compiler-cli": "^6.0.0",
-        "@types/node": "^9.4.0",
-        "babel-plugin-transform-class-properties": "^6.9.0",
-        "babel-plugin-transform-decorators-legacy": "^1.3.4",
-        "babel-preset-es2015": "^6.9.0",
-        "ng-packagr": "^1.6.0"
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "ngx-ace-tern",
+  "version": "1.2.2",
+  "description": "An ace editor directive for angular.",
+  "main": "./bundles/ngx-ace-tern.umd.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && ngc lib && ng-packagr -p ng-package.json",
+    "build2": "ngc && ng-packagr -p ng-package.json",
+    "build3": "ng-packagr -p package.json",
+    "compile": "babel src/index.js -o index.js --plugins transform-decorators-legacy,transform-class-properties --presets es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giscafer/ngx-ace-tern.git"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
     }
+  },
+  "keywords": [
+    "ng2",
+    "angular2",
+    "angular5",
+    "tern",
+    "ace",
+    "editor",
+    "ng2-ace",
+    "angular-ace"
+  ],
+  "author": "giscafer <giscafer@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giscafer/ngx-ace-tern/issues"
+  },
+  "homepage": "https://github.com/giscafer/ngx-ace-tern#readme",
+  "peerDependencies": {
+    "@angular/core": "^8.0.3"
+  },
+  "devDependencies": {
+    "@angular/cli": "^8.0.6",
+    "@angular/compiler": "^8.0.3",
+    "@angular/compiler-cli": "^8.0.3",
+    "@angular/core": "^8.0.3",
+    "@types/node": "^12.0.10",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "ng-packagr": "^5.3.0",
+    "typescript": "^3.4.2"
+  }
 }

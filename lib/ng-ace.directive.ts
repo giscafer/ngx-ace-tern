@@ -1,5 +1,11 @@
-
-import { OnInit, Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import {
+  OnInit,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 import { initTern } from './tern';
 
 declare var ace: any;
@@ -8,7 +14,6 @@ declare var ace: any;
   selector: '[ace-editor]'
 })
 export class AceEditorDirective implements OnInit {
-
   _text: string;
   _mode: string;
   _theme: string;
@@ -20,13 +25,14 @@ export class AceEditorDirective implements OnInit {
   @Output() textChanged = new EventEmitter<any>();
   @Output() editorRef = new EventEmitter<any>();
 
-
   @Input()
   set options(value: any) {
-    this.editor.setOptions(value || {
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
+    this.editor.setOptions(
+      value || {
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
+      }
+    );
   }
 
   @Input()
@@ -37,7 +43,7 @@ export class AceEditorDirective implements OnInit {
 
   @Input()
   set theme(value: string) {
-    this._theme = value || 'chrome';;
+    this._theme = value || 'chrome';
     this.editor.setTheme(`ace/theme/${value}`);
   }
 
@@ -56,7 +62,7 @@ export class AceEditorDirective implements OnInit {
   }
 
   constructor(private elementRef: ElementRef) {
-    const el = elementRef.nativeElement;
+    const el = this.elementRef.nativeElement;
     el.classList.add('editor');
     this.editor = (<any>window).ace.edit(el);
 
