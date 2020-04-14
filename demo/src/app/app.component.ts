@@ -3,20 +3,20 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
   code = '';
   aceOptions = {
     enableBasicAutocompletion: true,
     enableSnippets: true,
-    enableLiveAutocompletion: true
+    enableLiveAutocompletion: true,
   };
+  mode = 'javascript';
 
   acEditor: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.code = require('!!raw-loader!./test-code.js');
@@ -28,5 +28,9 @@ export class AppComponent implements OnInit {
 
   editorRef($event) {
     this.acEditor = $event;
+  }
+
+  modeChnage($event) {
+    this.mode = $event;
   }
 }

@@ -1,9 +1,37 @@
-
 <ul>
   <li>1、支持语法检测</li>
   <li>2、支持属性提示自动输入</li>
-  <li>3、支持快捷键，类似vim或sublime，如Ctrl+Shit+D快速复制一行，Ctrl+D 快速删除一行</li>
+  <li>
+    3、支持快捷键，类似vim或sublime，如 Ctrl+Shit+D 快速复制一行，Ctrl+D （Mac 为
+    command+D） 快速删除一行
+  </li>
 </ul>
-<br>
-<div #editor id="code-panel" ace-editor [text]="code" [mode]="'javascript'" [theme]="'chrome'" [options]="aceOptions" [readOnly]="false"
-(textChanged)="onAceChange($event)" (editorRef)="editorRef($event)" style="display:block; height: 80vh; width:100%"></div>
+<br />
+<div style="margin-bottom: 15px;">
+  <label>选择识别语言类型：</label>
+  <select
+    [(ngModel)]="mode"
+    (ngModleChange)="modeChnage($event)"
+    style="width: 160px; height: 20px;"
+  >
+    <option value="javascript">javascript</option>
+    <option value="css">css</option>
+    <option value="html">html</option>
+    <option value="json">json</option>
+    <option value="sql">sql</option>
+    <option value="markdown">markdown</option>
+  </select>
+</div>
+<div
+  #editor
+  id="code-panel"
+  ace-editor
+  [text]="code"
+  [mode]="mode"
+  [theme]="'chrome'"
+  [options]="aceOptions"
+  [readOnly]="false"
+  (textChanged)="onAceChange($event)"
+  (editorRef)="editorRef($event)"
+  style="display: block; height: 80vh; width: 100%;"
+></div>
