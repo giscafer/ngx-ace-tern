@@ -8,7 +8,7 @@ Tern plugin for Ace Editor, base on Angular8.x.
 
 default options
 
-```
+```js
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
 ```
@@ -19,17 +19,32 @@ default theme: `chrome`
 
 # Install
 
-`npm i ngx-ace-tern`
+`npm i ngx-ace-tern -S`
 
 ## Sample Usage
 
-add scripts `ace-builds` in your `index.html` or `angular-cli.json`
+add scripts `ace-builds` in your `index.html` or `angular-cli.json`.
 
-eg:
+you also can use [brace](https://github.com/thlorenz/brace) instead of ace-builds.
+
+### eg
+
+#### First
 
 ```html
 <script src="./assets/ace-builds/src-noconflict/ace.js"></script>
 ```
+
+or use [brace](https://github.com/thlorenz/brace) to cleaning angular.json:
+
+```ts
+import 'brace/index';
+import 'brace/mode/markdown';
+import 'brace/theme/github';
+import 'brace/theme/monokai';
+```
+
+#### Second
 
 ```ts
 import { Component } from '@angular/core';
@@ -49,13 +64,13 @@ import { AceEditorDirective } from 'ngx-ace-tern';
       (textChanged)="onChange($event)"
       style="display:block; height: 80vh; width:100%"
     ></div>
-  `
+  `,
 })
 export class MyComponent {
   constructor() {
     this.text = 'test';
     this.options = { printMargin: false };
-    this.onChange = data => {
+    this.onChange = (data) => {
       console.log(data);
     };
   }
@@ -66,7 +81,6 @@ Important pieces to note in the HTML template: `[ace-editor]` attribute, `[text]
 
 ## Related
 
-- [ng-ace](https://github.com/giscafer/ng-ace)
 - [Ace.Tern](https://github.com/sevin7676/Ace.Tern)
 
 # License
